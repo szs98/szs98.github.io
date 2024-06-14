@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+<h1>javascript enigma makinesi</h1>
+<h2></h2>
+
+<input placeholder="mesaj" id="mesajkutusu">
+<button onclick="printthis()">decode</button>
+<p id="demo"></p>
+
+<script>
+function printthis(){
+a = document.getElementById("mesajkutusu").value
+let text = a
+let encoded = window.btoa(text);
+let encodedtwo = window.btoa(encoded);
+let encodedthree = window.btoa(encodedtwo);
+let encodedfour = window.btoa(encodedthree);
+let encodedfive = window.btoa(encodedfour);
+let encodedsix = window.btoa(encodedfive);
+let decoded = window.atob(encoded);
+
+document.getElementById("demo").innerHTML = "Şifre: " + encodedfive + "<br>" + "Deşifre: " + decoded;}
+</script>
+
+</body>
+</html>
